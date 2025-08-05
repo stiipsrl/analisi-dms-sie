@@ -1,0 +1,662 @@
+<!-- Demo Container -->
+<div class="space-y-8">
+    <!-- Demo Introduction -->
+    <div class="bg-white rounded-xl shadow-md p-6">
+        <div class="border-l-4 brand-border pl-4 mb-8">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Demo Modulo DMS - Gestione Documentale</h2>
+            <p class="text-gray-600">
+                Questa demo mostra le interfacce principali del modulo DMS per S.I.E. Engineering, 
+                dal backoffice di gestione documenti fino al portale cliente, evidenziando la facilità d'uso 
+                e l'integrazione perfetta con GiveMeHive.
+            </p>
+        </div>
+    </div>
+
+    <!-- Cliente Portal Preview -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl">
+        <h3 class="text-white text-lg font-semibold mb-4">Portale Cliente - Vista Documenti</h3>
+        
+        <!-- Browser Chrome -->
+        <div class="bg-gray-100 rounded-t-lg flex items-center p-3 space-x-2">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 bg-white rounded-full px-4 py-1 text-sm text-gray-600">
+                app.givemehive.cloud/?fqdn=sie
+            </div>
+        </div>
+
+        <!-- Portal Interface -->
+        <div class="bg-gray-50 h-[700px] rounded-b-lg overflow-hidden">
+            <!-- Header -->
+            <div class="bg-white border-b px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <img src="https://stiip.it/wp-content/uploads/2021/11/logo_stiip.svg" alt="Logo" class="h-8">
+                    <span class="text-gray-500">|</span>
+                    <span class="text-xl font-semibold text-gray-800">Area Documenti - Iper SpA</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                        <span class="material-icons-outlined text-sm">notifications</span>
+                        <span>Notifiche</span>
+                    </button>
+                    <div class="flex items-center space-x-2 px-4 py-2 bg-gray-100 rounded-lg">
+                        <span class="material-icons-outlined text-sm">person</span>
+                        <span class="text-sm">Mario Rossi - Iper SpA</span>
+                    </div>
+                    <button class="text-gray-600 hover:text-gray-800">
+                        <span class="material-icons-outlined">logout</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="p-6">
+                <!-- Welcome Banner -->
+                <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg p-6 mb-6 border border-blue-200">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <h2 class="text-2xl font-bold text-gray-800 mb-2">Benvenuto nel portale documenti</h2>
+                            <p class="text-gray-600">Accedi a tutti i documenti del tuo progetto in un unico luogo sicuro</p>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-600">24</div>
+                            <div class="text-sm text-gray-600">Documenti disponibili</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toolbar -->
+                <div class="bg-white rounded-lg shadow mb-6 p-4">
+                    <div class="flex items-center justify-between">
+                        <div class="flex items-center space-x-4">
+                            <!-- View Toggle -->
+                            <div class="flex items-center bg-gray-100 rounded-lg p-1">
+                                <button class="px-3 py-1 bg-white rounded text-sm font-medium text-gray-700 shadow-sm">
+                                    <span class="material-icons-outlined text-sm">view_list</span>
+                                </button>
+                                <button class="px-3 py-1 text-sm text-gray-500 hover:text-gray-700">
+                                    <span class="material-icons-outlined text-sm">grid_view</span>
+                                </button>
+                            </div>
+                            
+                            <!-- Search -->
+                            <div class="relative">
+                                <input type="text" placeholder="Cerca documenti..." class="pl-10 pr-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-500 w-64">
+                                <span class="material-icons-outlined absolute left-3 top-2 text-gray-400 text-sm">search</span>
+                            </div>
+
+                            <!-- Filters -->
+                            <select class="px-4 py-2 border border-gray-300 rounded-lg text-sm focus:outline-none focus:border-blue-500">
+                                <option>Tutti i documenti</option>
+                                <option>Contratti</option>
+                                <option>Progetti</option>
+                                <option>Rapporti</option>
+                            </select>
+                        </div>
+                        
+                        <div class="flex items-center space-x-2">
+                            <button class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg flex items-center">
+                                <span class="material-icons-outlined text-sm mr-1">filter_list</span>
+                                Filtri
+                            </button>
+                            <button class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg flex items-center">
+                                <span class="material-icons-outlined text-sm mr-1">sort</span>
+                                Ordina
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Folders/Tags -->
+                <div class="grid grid-cols-6 gap-4 mb-6">
+                    <div class="bg-blue-50 border border-blue-200 rounded-lg p-4 cursor-pointer hover:bg-blue-100 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="material-icons-outlined text-blue-600">folder</span>
+                            <span class="text-xs text-blue-600 font-medium">8 file</span>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">Contratti</div>
+                    </div>
+                    <div class="bg-green-50 border border-green-200 rounded-lg p-4 cursor-pointer hover:bg-green-100 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="material-icons-outlined text-green-600">folder</span>
+                            <span class="text-xs text-green-600 font-medium">5 file</span>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">Progetti</div>
+                    </div>
+                    <div class="bg-purple-50 border border-purple-200 rounded-lg p-4 cursor-pointer hover:bg-purple-100 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="material-icons-outlined text-purple-600">folder</span>
+                            <span class="text-xs text-purple-600 font-medium">7 file</span>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">Specifiche</div>
+                    </div>
+                    <div class="bg-orange-50 border border-orange-200 rounded-lg p-4 cursor-pointer hover:bg-orange-100 transition">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="material-icons-outlined text-orange-600">folder</span>
+                            <span class="text-xs text-orange-600 font-medium">4 file</span>
+                        </div>
+                        <div class="text-sm font-medium text-gray-800">Rapporti</div>
+                    </div>
+                </div>
+
+                <!-- Documents Table -->
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-50 border-b">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nome</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Tipo</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data caricamento</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Dimensione</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-red-600 mr-3">picture_as_pdf</span>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">Contratto_Manutenzione_2025.pdf</div>
+                                            <div class="text-xs text-gray-500">Contratti</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">PDF</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">03/07/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">2.4 MB</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-blue-600 hover:text-blue-900 mr-3">
+                                        <span class="material-icons-outlined text-sm">visibility</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-900">
+                                        <span class="material-icons-outlined text-sm">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50 bg-yellow-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-orange-600 mr-3">folder_zip</span>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900 flex items-center">
+                                                Progetto_Impianto_Refrigerazione.zip
+                                                <span class="ml-2 px-2 py-1 bg-yellow-200 text-yellow-800 text-xs rounded-full">Nuovo</span>
+                                            </div>
+                                            <div class="text-xs text-gray-500">Progetti</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">ZIP</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">04/07/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">15.8 MB</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-blue-600 hover:text-blue-900 mr-3">
+                                        <span class="material-icons-outlined text-sm">visibility</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-900">
+                                        <span class="material-icons-outlined text-sm">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-blue-600 mr-3">description</span>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">Specifiche_Tecniche_v2.docx</div>
+                                            <div class="text-xs text-gray-500">Specifiche</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">DOCX</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">01/07/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">856 KB</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-blue-600 hover:text-blue-900 mr-3">
+                                        <span class="material-icons-outlined text-sm">visibility</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-900">
+                                        <span class="material-icons-outlined text-sm">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-green-600 mr-3">image</span>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">Foto_Cantiere_PostIntervento.jpg</div>
+                                            <div class="text-xs text-gray-500">Rapporti</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">JPG</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">02/07/2025</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">4.2 MB</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium">
+                                    <button class="text-blue-600 hover:text-blue-900 mr-3">
+                                        <span class="material-icons-outlined text-sm">visibility</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-900">
+                                        <span class="material-icons-outlined text-sm">download</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Backoffice S.I.E. Dashboard -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl mt-8">
+        <h3 class="text-white text-lg font-semibold mb-4">Dashboard S.I.E. - Gestione Documenti e Account Clienti</h3>
+        
+        <!-- Browser Chrome -->
+        <div class="bg-gray-100 rounded-t-lg flex items-center p-3 space-x-2">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 bg-white rounded-full px-4 py-1 text-sm text-gray-600">
+                app.givemehive.com/sie-engineering/dms
+            </div>
+        </div>
+
+        <!-- Dashboard Interface -->
+        <div class="bg-gray-50 h-[700px] rounded-b-lg overflow-hidden">
+            <!-- App Header -->
+            <div class="bg-white border-b px-6 py-4 flex justify-between items-center">
+                <div class="flex items-center space-x-4">
+                    <div class="text-2xl font-bold text-gray-800">GiveMeHive</div>
+                    <span class="text-gray-500">|</span>
+                    <span class="text-gray-600">S.I.E. Engineering - Modulo DMS</span>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button class="flex items-center space-x-2 px-4 py-2 text-sm text-gray-600 hover:bg-gray-100 rounded-lg">
+                        <span class="material-icons-outlined text-sm">person</span>
+                        <span>Admin S.I.E.</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="grid grid-cols-12 gap-6 p-6 h-[calc(100%-76px)] overflow-y-auto">
+                <!-- Sidebar -->
+                <div class="col-span-3 bg-white rounded-lg shadow p-4">
+                    <div class="space-y-2">
+                        <div class="flex items-center space-x-2 p-2 bg-brand bg-opacity-10 rounded-lg text-gray-900">
+                            <span class="material-icons-outlined">folder</span>
+                            <span>Documenti</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">group</span>
+                            <span>Account Clienti</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">notifications</span>
+                            <span>Notifiche</span>
+                        </div>
+                        <div class="flex items-center space-x-2 p-2 hover:bg-gray-50 rounded-lg text-gray-600">
+                            <span class="material-icons-outlined">analytics</span>
+                            <span>Analytics</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main Content Area -->
+                <div class="col-span-9 space-y-6">
+                    <!-- Stats Row -->
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">Documenti Totali</span>
+                                <span class="material-icons-outlined text-blue-500">description</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">847</div>
+                            <div class="text-xs text-gray-500">+23 questa settimana</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">Clienti Attivi</span>
+                                <span class="material-icons-outlined text-green-500">business</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">42</div>
+                            <div class="text-xs text-gray-500">156 utenti totali</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">Download Oggi</span>
+                                <span class="material-icons-outlined text-purple-500">download</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">67</div>
+                            <div class="text-xs text-gray-500">+15% vs ieri</div>
+                        </div>
+                        <div class="bg-white p-4 rounded-lg shadow">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-sm text-gray-500">Storage Utilizzato</span>
+                                <span class="material-icons-outlined text-orange-500">storage</span>
+                            </div>
+                            <div class="text-2xl font-bold text-gray-900">124 GB</div>
+                            <div class="text-xs text-gray-500">Su 500 GB disponibili</div>
+                        </div>
+                    </div>
+
+                    <!-- Document Upload Section -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="flex justify-between items-center p-4 border-b">
+                            <h3 class="font-semibold text-gray-900">Carica Nuovo Documento</h3>
+                            <button class="px-4 py-2 bg-brand text-gray-900 rounded-lg text-sm font-medium hover:opacity-90">
+                                <span class="material-icons-outlined text-sm mr-1">upload_file</span>
+                                Carica Documento
+                            </button>
+                        </div>
+                        <div class="p-4">
+                            <div class="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-gray-400 transition cursor-pointer">
+                                <span class="material-icons-outlined text-gray-400 text-5xl mb-4">cloud_upload</span>
+                                <p class="text-gray-600 mb-2">Trascina qui i file o clicca per selezionare</p>
+                                <p class="text-sm text-gray-500">PDF, DOCX, XLSX, JPG, PNG (max 50MB)</p>
+                            </div>
+                            
+                            <!-- Upload Options -->
+                            <div class="mt-4">
+                                <div class="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-blue-600 mr-2 text-sm">info</span>
+                                        <p class="text-sm text-blue-800">Stai caricando documenti per: <strong>Iper SpA</strong></p>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700 mb-2">Tag/Cartella</label>
+                                    <select class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-500">
+                                        <option>Seleziona categoria...</option>
+                                        <option>Contratti</option>
+                                        <option>Progetti</option>
+                                        <option>Specifiche</option>
+                                        <option>Rapporti</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="mt-4 flex items-center">
+                                <input type="checkbox" id="notify" class="mr-2">
+                                <label for="notify" class="text-sm text-gray-700">Invia notifica email al cliente per questo documento</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Activity -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="flex justify-between items-center p-4 border-b">
+                            <h3 class="font-semibold text-gray-900">Attività Recenti</h3>
+                            <button class="text-sm text-blue-600 hover:text-blue-800">Vedi tutte</button>
+                        </div>
+                        <div class="divide-y divide-gray-200">
+                            <div class="p-4 hover:bg-gray-50">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="material-icons-outlined text-green-600 text-sm">download</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-gray-900">Mario Rossi (Iper SpA) ha scaricato</p>
+                                            <p class="text-sm text-gray-500">Contratto_Manutenzione_2025.pdf</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">5 min fa</span>
+                                </div>
+                            </div>
+                            <div class="p-4 hover:bg-gray-50">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="material-icons-outlined text-blue-600 text-sm">upload</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-gray-900">Hai caricato un nuovo documento</p>
+                                            <p class="text-sm text-gray-500">Progetto_Impianto_Refrigerazione.zip per Iper SpA</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">1 ora fa</span>
+                                </div>
+                            </div>
+                            <div class="p-4 hover:bg-gray-50">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="material-icons-outlined text-purple-600 text-sm">person_add</span>
+                                        </div>
+                                        <div>
+                                            <p class="text-sm font-medium text-gray-900">Nuovo account cliente creato</p>
+                                            <p class="text-sm text-gray-500">Giuseppe Verdi - RetailMax Italia</p>
+                                        </div>
+                                    </div>
+                                    <span class="text-xs text-gray-500">2 ore fa</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Account Management Interface -->
+    <div class="bg-gray-800 rounded-xl p-6 shadow-2xl mt-8">
+        <h3 class="text-white text-lg font-semibold mb-4">Gestione Account Clienti</h3>
+        
+        <!-- Browser Chrome -->
+        <div class="bg-gray-100 rounded-t-lg flex items-center p-3 space-x-2">
+            <div class="flex space-x-2">
+                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-yellow-500 rounded-full"></div>
+                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="flex-1 bg-white rounded-full px-4 py-1 text-sm text-gray-600">
+                app.givemehive.com/sie-engineering/account-clienti
+            </div>
+        </div>
+
+        <!-- Account Management -->
+        <div class="bg-gray-50 h-[600px] rounded-b-lg overflow-hidden">
+            <!-- Header -->
+            <div class="bg-white border-b px-6 py-4">
+                <div class="flex justify-between items-center">
+                    <h4 class="text-lg font-semibold text-gray-800">Account Clienti</h4>
+                    <button class="px-4 py-2 bg-brand text-gray-900 rounded-lg text-sm font-medium hover:opacity-90">
+                        <span class="material-icons-outlined text-sm mr-1">add</span>
+                        Crea Nuovo Account
+                    </button>
+                </div>
+            </div>
+
+            <!-- Client List -->
+            <div class="p-6">
+                <div class="bg-white rounded-lg shadow overflow-hidden">
+                    <table class="w-full">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Azienda Cliente</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Utenti</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Documenti</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Ultimo Accesso</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Stato</th>
+                                <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase">Azioni</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-sm font-medium text-blue-600">IP</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">Iper SpA</div>
+                                            <div class="text-sm text-gray-500">P.IVA: 01234567890</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-sm mr-1">group</span>
+                                        3 utenti
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">24 documenti</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">5 min fa</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Attivo</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">edit</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">person_add</span>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <span class="material-icons-outlined text-sm">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-sm font-medium text-green-600">SM</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">SuperMart Srl</div>
+                                            <div class="text-sm text-gray-500">P.IVA: 09876543210</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-sm mr-1">group</span>
+                                        5 utenti
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">18 documenti</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Ieri</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-green-100 text-green-800 text-xs rounded-full">Attivo</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">edit</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">person_add</span>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <span class="material-icons-outlined text-sm">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4">
+                                    <div class="flex items-center">
+                                        <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3">
+                                            <span class="text-sm font-medium text-purple-600">RM</span>
+                                        </div>
+                                        <div>
+                                            <div class="text-sm font-medium text-gray-900">RetailMax Italia</div>
+                                            <div class="text-sm text-gray-500">P.IVA: 11223344556</div>
+                                        </div>
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">
+                                    <div class="flex items-center">
+                                        <span class="material-icons-outlined text-sm mr-1">group</span>
+                                        2 utenti
+                                    </div>
+                                </td>
+                                <td class="px-6 py-4 text-sm text-gray-500">7 documenti</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Mai</td>
+                                <td class="px-6 py-4">
+                                    <span class="px-2 py-1 bg-yellow-100 text-yellow-800 text-xs rounded-full">In attesa</span>
+                                </td>
+                                <td class="px-6 py-4 text-sm">
+                                    <button class="text-blue-600 hover:text-blue-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">edit</span>
+                                    </button>
+                                    <button class="text-green-600 hover:text-green-800 mr-2">
+                                        <span class="material-icons-outlined text-sm">person_add</span>
+                                    </button>
+                                    <button class="text-gray-600 hover:text-gray-800">
+                                        <span class="material-icons-outlined text-sm">more_vert</span>
+                                    </button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Create Account Modal Preview -->
+                <div class="mt-6 bg-white rounded-lg shadow p-6">
+                    <h5 class="font-medium text-gray-800 mb-4">Anteprima: Creazione Nuovo Account</h5>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Email accesso</label>
+                            <input type="email" placeholder="cliente@azienda.it" class="w-full px-3 py-2 border border-gray-300 rounded-lg">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Password temporanea</label>
+                            <div class="flex">
+                                <input type="text" value="TempPass2025!" class="flex-1 px-3 py-2 border border-gray-300 rounded-l-lg" readonly>
+                                <button class="px-3 py-2 bg-gray-100 border border-l-0 border-gray-300 rounded-r-lg hover:bg-gray-200">
+                                    <span class="material-icons-outlined text-sm">refresh</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-4 flex items-center text-sm text-gray-600">
+                        <span class="material-icons-outlined text-yellow-500 text-sm mr-2">info</span>
+                        Il cliente riceverà un'email con le credenziali e dovrà cambiare la password al primo accesso
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feature Highlights -->
+    <div class="grid grid-cols-3 gap-6 mt-8">
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">folder_shared</span>
+                <h4 class="font-medium text-gray-900">Interfaccia Intuitiva</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Portale cliente con design familiare stile Google Drive per massima usabilità.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">security</span>
+                <h4 class="font-medium text-gray-900">Accessi Sicuri</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Sistema multi-utente con cambio password obbligatorio e audit log completo.
+            </p>
+        </div>
+
+        <div class="bg-white rounded-lg shadow p-4">
+            <div class="flex items-center space-x-2 mb-4">
+                <span class="material-icons-outlined text-[#FCD415]">notifications_active</span>
+                <h4 class="font-medium text-gray-900">Notifiche Smart</h4>
+            </div>
+            <p class="text-sm text-gray-600">
+                Email automatiche per nuovi documenti con possibilità di personalizzazione per cliente.
+            </p>
+        </div>
+    </div>
+</div>
